@@ -1,5 +1,6 @@
 const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js");
 const formatDuration = require("../../../structures/FormatDuration.js");
+const { defaultVolume } = require("../../../settings/config.js");
 
 module.exports = {
     name: "play",
@@ -47,6 +48,7 @@ module.exports = {
                 textChannel: interaction.channel.id,
                 deaf: true,
             });
+            await player.setVolume(parseInt(defaultVolume));
         }
 
         const song = interaction.options.getString("query");

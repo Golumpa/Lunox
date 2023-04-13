@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
+const { defaultVolume } = require("../../../settings/config.js");
 
 module.exports = {
     name: "join",
@@ -39,6 +40,7 @@ module.exports = {
                 deaf: true,
             });
 
+            await player.setVolume(parseInt(defaultVolume));
             await player.connect();
 
             const embed = new EmbedBuilder()

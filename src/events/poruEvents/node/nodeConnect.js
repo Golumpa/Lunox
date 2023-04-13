@@ -1,4 +1,5 @@
 const Reconnect = require("../../../settings/models/247.js");
+const { defaultVolume } = require("../../../settings/config.js");
 
 module.exports.run = async (client, node) => {
     console.log(`[INFO] Node ${node.name} Ready!`);
@@ -24,6 +25,8 @@ module.exports.run = async (client, node) => {
                 textChannel: data.text,
                 deaf: true,
             });
+
+            await player.setVolume(parseInt(defaultVolume));
 
             console.log(`[INFO] Auto ReConnect found in ${maindata.length} servers!`);
         }),

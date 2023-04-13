@@ -21,6 +21,7 @@ module.exports = {
         artistLimit: 2, // 1 = 50 tracks
         searchMarket: "us",
     },
+    defaultVolume: process.env.DEFAULT_VOLUME || "50", // the default volume that the bot will join with.
     nodes: [
         {
             name: process.env.NODE_NAME || "Lunox", // lavalink node name (anything you want)

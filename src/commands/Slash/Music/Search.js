@@ -1,5 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ApplicationCommandOptionType } = require("discord.js");
 const formatDuration = require("../../../structures/FormatDuration.js");
+const { defaultVolume } = require("../../../settings/config.js");
 
 module.exports = {
     name: "search",
@@ -59,6 +60,7 @@ module.exports = {
                 textChannel: interaction.channel.id,
                 deaf: true,
             });
+            await player.setVolume(parseInt(defaultVolume));
         }
 
         const res = await client.poru.resolve(query, source);

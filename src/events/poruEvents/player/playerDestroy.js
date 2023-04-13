@@ -1,4 +1,5 @@
 const Reconnect = require("../../../settings/models/247.js");
+const { defaultVolume } = require("../../../settings/config.js");
 
 module.exports.run = async (client, player) => {
     const data = await Reconnect.findOne({ guild: player.guildId });
@@ -15,6 +16,8 @@ module.exports.run = async (client, player) => {
             textChannel: data.text,
             deaf: true,
         });
+
+        await player.setVolume(parseInt(defaultVolume));
     }
     //
 
