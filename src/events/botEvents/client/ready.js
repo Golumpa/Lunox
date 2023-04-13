@@ -15,7 +15,7 @@ module.exports.run = async (client) => {
     }
 
     const status = [
-        { type: ActivityType.Listening, name: "Lunox" },
+        { type: ActivityType.Listening, name: '${client.user.username}\'s Mixtape!' },
         { type: ActivityType.Playing, name: "/help" },
         { type: ActivityType.Watching, name: `${client.guilds.cache.size} Servers` },
         { type: ActivityType.Competing, name: `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Users` },
