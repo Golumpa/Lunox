@@ -40,7 +40,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setAuthor({ name: `${interaction.guild.members.me.displayName} Info!`, iconURL: interaction.guild.iconURL({ dynamic: true }) })
             .setDescription(
-                ` Hello **${interaction.member}**, I am **${client.user}**. A Rich Quality Discord Music Bot. Support  Spotify, SoundCloud, Apple Music & Others. Find out what can I do by using \`/help\` command.`
+                ` Hello **${interaction.member}**, I am **${client.user}**. A Feature Rich Quality Discord Bot. I am currently able to play music for you but in the future hope to entertain you with cool memes and cute kitsune pictures. Find out what can I do by using \`/help\` command.`
             )
             .addFields([
                 { name: `\`🔱\` • Servers`, value: `\`\`\`Total: ${scount} servers\`\`\``, inline: true },
@@ -48,7 +48,7 @@ module.exports = {
                 { name: `\`🎧\` • Players`, value: `\`\`\`Currently used by ${playingPlayers} servers\n\`\`\``, inline: true },
                 { name: `\`📈\` • Uptime`, value: `\`\`\`${ms(uptime)}\`\`\``, inline: true },
                 { name: `\`🏓\` • Ping`, value: `\`\`\`${Math.round(client.ws.ping)}ms\`\`\``, inline: true },
-                { name: `\`💠\` • Owners`, value: `\`\`\`adh319#9370\`\`\``, inline: true },
+                { name: `\`💠\` • Owners`, value: `\`\`\`Golumpa#8080\`\`\``, inline: true },
             ])
             .setImage(imageUrl)
             .setColor(client.color)

@@ -44,7 +44,7 @@ module.exports = {
             .setColor(client.color)
             .setImage(imageUrl)
             .setDescription(
-                `Hello **${interaction.member}**, I'm **${client.user}**. A Rich Quality Discord Music Bot. Support  Spotify, SoundCloud, Apple Music & Others. Find out what I can do using menu selection below.`
+                ` Hello **${interaction.member}**, I am **${client.user}**. A Feature Rich Quality Discord Bot. I am currently able to play music for you but in the future hope to entertain you with cool memes and cute kitsune pictures. Find out what I can do using menu selection below.`
             )
             .setFooter({
                 text: `© ${client.user.username} | Total Commands: ${client.slashCommands.size}`,
